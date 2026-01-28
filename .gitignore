@@ -5,6 +5,14 @@
 credentials.json
 token.json
 
+# Sensitive Clawdbot data
+.clawdbot/agents/*/agent/auth-profiles.json
+.clawdbot/agents/*/sessions/*.jsonl
+.clawdbot/agents/*/sessions/*.jsonl.*
+.clawdbot/identity/
+.clawdbot/browser/
+clawd/openai-helper.sh
+
 # Dependencies
 node_modules/
 venv/
