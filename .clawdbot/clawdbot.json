@@ -41,7 +41,7 @@
       "search": {
         "enabled": true,
         "provider": "brave",
-        "apiKey": "BSA_OX7dbvrCVyfx3nJdDWHWuqvUSve"
+        "apiKey": "REDACTED"
       }
     }
   },
@@ -56,7 +56,7 @@
     "telegram": {
       "enabled": true,
       "dmPolicy": "pairing",
-      "botToken": "8219840899:AAGXZtjTCpnk0quSAa702mF6DF6S6ZIsvJo",
+      "botToken": "REDACTED",
       "groupPolicy": "allowlist",
       "streamMode": "partial"
     }
@@ -67,7 +67,7 @@
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "4e3d4e1f87eb1bea3d7aa0b4d5ad92bdfcf1b0730ba8648d"
+      "token": "REDACTED"
     },
     "tailscale": {
       "mode": "off",

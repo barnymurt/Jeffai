@@ -5,6 +5,11 @@
 .clawdbot/identity/
 .clawdbot/browser/
 
+# Config files with tokens (use templates instead)
+# Note: clawdbot.json files are tracked but secrets are redacted
+# .clawdbot/clawdbot.json
+# .clawdbot/clawdbot.json.bak*
+
 # OpenAI helper with hardcoded key
 clawd/openai-helper.sh
 
