@@ -1,18 +1,48 @@
-# Sensitive data - contains API keys and secrets
-.clawdbot/agents/*/agent/auth-profiles.json
-.clawdbot/agents/*/sessions/*.jsonl
-.clawdbot/agents/*/sessions/*.jsonl.*
-.clawdbot/identity/
-.clawdbot/browser/
-
-# OpenAI helper with hardcoded key
-clawd/openai-helper.sh
-
-# Environment files
+# Environment & Secrets
 .env
 .env.*
 *.env
-
-# Credentials
 credentials.json
 token.json
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# Build outputs
+.next/
+dist/
+build/
+*.egg-info/
+
+# Generated files (large/binary)
+projects/etsy-printables/generated/
+projects/research/reports/*.pdf
+*.pdf
+*.png
+*.jpg
+!docs/**/*.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Archive - sensitive Clawdbot data
+archive/.clawdbot/agents/*/agent/auth-profiles.json
+archive/.clawdbot/agents/*/sessions/*.jsonl
+archive/.clawdbot/agents/*/sessions/*.jsonl.*
+archive/.clawdbot/identity/
+archive/.clawdbot/browser/
+archive/clawd/openai-helper.sh

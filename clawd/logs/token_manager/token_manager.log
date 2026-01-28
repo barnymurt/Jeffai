@@ -1,4 +1,0 @@
-[2026-01-27 10:09:44] Token management started
-[2026-01-27 10:09:44] Token limit exceeded in session: /home/ubuntu/.clawdbot/agents/main/sessions/af39350d-e95f-4928-9bad-e912bdf6861f.jsonl (Tokens: 478490)
-[2026-01-27 10:09:44] Session reset and archived: /home/ubuntu/clawd/logs/token_manager/archived_session_20260127_100944.jsonl
-[2026-01-27 10:09:44] Token management cycle completed

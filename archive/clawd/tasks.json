@@ -1,0 +1,130 @@
+{
+  "board": "Patrick & Jeff Task Board",
+  "updated": "2026-01-26T15:30:00Z",
+  "columns": {
+    "ideation": "💡 Ideation",
+    "progress": "🔄 In Progress",
+    "review": "👀 Ready for Review",
+    "demo": "🚀 Demo Ready",
+    "deployed": "✅ Deployed"
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Research ClawdHub productivity skills",
+      "description": "Explore email automation, calendar integration, social media management",
+      "status": "ideation",
+      "owner": "jeff",
+      "priority": "medium",
+      "created": "2026-01-26T15:30:00Z"
+    },
+    {
+      "id": 2,
+      "title": "AI Agent Research Framework",
+      "description": "Design systematic approach for implementing Patrick's product concepts",
+      "status": "ideation",
+      "owner": "both",
+      "priority": "high",
+      "created": "2026-01-26T15:30:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Skills Setup - Core Integration",
+      "description": "Configure GitHub, Bird (Twitter), Notion, basic toolchain",
+      "status": "progress",
+      "owner": "jeff",
+      "priority": "high",
+      "created": "2026-01-26T15:30:00Z"
+    },
+    {
+      "id": 4,
+      "title": "Task Board Migration to GitHub",
+      "description": "Set up GitHub Projects for long-term collaboration",
+      "status": "progress",
+      "owner": "jeff",
+      "priority": "medium",
+      "created": "2026-01-26T15:30:00Z"
+    },
+    {
+      "id": 5,
+      "title": "Weather Skill Demo",
+      "description": "Show weather integration working for Lisbon",
+      "status": "deployed",
+      "owner": "jeff",
+      "priority": "low",
+      "created": "2026-01-26T15:30:00Z"
+    },
+    {
+      "id": 6,
+      "title": "Basic Clawdbot Setup",
+      "description": "Weather, GitHub CLI, tmux, clawdhub, Bird installation complete",
+      "status": "deployed",
+      "owner": "jeff",
+      "priority": "medium",
+      "created": "2026-01-26T15:30:00Z"
+    },
+    {
+      "id": 7,
+      "title": "Strategy 2: Freelance Arbitrage Empire",
+      "description": "Fiverr/Upwork automation with AI + manual QC. Most accessible, immediate revenue potential",
+      "status": "ideation",
+      "owner": "both",
+      "priority": "high",
+      "created": "2026-01-26T16:12:00Z"
+    },
+    {
+      "id": 8,
+      "title": "Strategy 3: Data-as-a-Service Scraper",
+      "description": "Scrape valuable data, AI-clean it, sell to businesses. Leverages our technical strengths",
+      "status": "ideation",
+      "owner": "both",
+      "priority": "high",
+      "created": "2026-01-26T16:12:00Z"
+    },
+    {
+      "id": 9,
+      "title": "Strategy 1: Agentic Marketplace",
+      "description": "Deploy autonomous agents on Olas/Fetch.ai networks. Requires crypto setup",
+      "status": "ideation",
+      "owner": "both",
+      "priority": "medium",
+      "created": "2026-01-26T16:12:00Z"
+    },
+    {
+      "id": 10,
+      "title": "Strategy 4: AI-Enhanced Microtasking",
+      "description": "5x faster completion on Toloka/MTurk with AI assistance",
+      "status": "progress",
+      "owner": "both",
+      "priority": "medium",
+      "created": "2026-01-26T16:12:00Z"
+    },
+    {
+      "id": 11,
+      "title": "Agent Browser Setup - COMPLETE",
+      "description": "Install agent-browser skill for independent web automation - SUCCESS! 🌐",
+      "status": "deployed",
+      "owner": "jeff",
+      "priority": "high",
+      "created": "2026-01-26T17:02:00Z"
+    },
+    {
+      "id": 12,
+      "title": "Rate Limit Strategy - IMPLEMENTED",
+      "description": "Browser-first approach with 3-5s delays eliminates API rate limits completely",
+      "status": "deployed",
+      "owner": "jeff",
+      "priority": "high",
+      "created": "2026-01-26T17:11:00Z"
+    },
+    {
+      "id": 13,
+      "title": "Clickworker Registration - IN PROGRESS",
+      "description": "Form filled, investigating validation requirements (country/terms)",
+      "status": "progress",
+      "owner": "jeff",
+      "priority": "high",
+      "created": "2026-01-26T17:11:00Z"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# AI & LLM
+anthropic>=0.20.0
+openai>=1.0.0
+google-generativeai>=0.3.0
+
+# PDF Generation
+reportlab>=4.0.0
+fpdf2>=2.7.0
+PyPDF2>=3.0.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# Web & APIs
+requests>=2.31.0
+httpx>=0.25.0
+beautifulsoup4>=4.12.0
+
+# Data
+pandas>=2.0.0
+python-dotenv>=1.0.0
+
+# Optional integrations (uncomment as needed)
+# slack_sdk>=3.0.0
+# notion_client>=2.0.0
+# trello>=0.9.0
