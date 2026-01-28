@@ -1,0 +1,18 @@
+# Sensitive data - contains API keys and secrets
+.clawdbot/agents/*/agent/auth-profiles.json
+.clawdbot/agents/*/sessions/*.jsonl
+.clawdbot/agents/*/sessions/*.jsonl.*
+.clawdbot/identity/
+.clawdbot/browser/
+
+# OpenAI helper with hardcoded key
+clawd/openai-helper.sh
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Credentials
+credentials.json
+token.json

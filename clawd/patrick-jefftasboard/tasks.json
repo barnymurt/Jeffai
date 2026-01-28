@@ -1,0 +1,67 @@
+{
+  "board": "Patrick & Jeff Task Board",
+  "updated": "2026-01-26T15:43:00Z",
+  "columns": {
+    "ideation": "💡 Ideation",
+    "progress": "🔄 In Progress", 
+    "review": "👀 Ready for Review",
+    "demo": "🚀 Demo Ready",
+    "deployed": "✅ Deployed"
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Research ClawdHub Productivity Skills",
+      "description": "Explore email automation, calendar integration, social media management tools",
+      "status": "ideation",
+      "owner": "jeff",
+      "priority": "medium",
+      "created": "2026-01-26T15:43:00Z"
+    },
+    {
+      "id": 2,
+      "title": "AI Agent Research Framework",
+      "description": "Design systematic approach for implementing Patrick's product concepts into actionable workflows",
+      "status": "ideation",
+      "owner": "both",
+      "priority": "high",
+      "created": "2026-01-26T15:43:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Skills Setup - Core Integration",
+      "description": "Configure GitHub, Bird (Twitter), Notion, and essential development toolchain",
+      "status": "progress",
+      "owner": "jeff", 
+      "priority": "high",
+      "created": "2026-01-26T15:43:00Z"
+    },
+    {
+      "id": 4,
+      "title": "GitHub Task Board Migration",
+      "description": "Set up professional GitHub Projects board for long-term collaboration",
+      "status": "progress",
+      "owner": "jeff",
+      "priority": "medium",
+      "created": "2026-01-26T15:43:00Z"
+    },
+    {
+      "id": 5,
+      "title": "Weather Skills Integration",
+      "description": "Lisbon weather forecasting and wttr.in integration fully operational",
+      "status": "deployed",
+      "owner": "jeff",
+      "priority": "low",
+      "created": "2026-01-26T15:43:00Z"
+    },
+    {
+      "id": 6,
+      "title": "Basic Clawdbot Setup",
+      "description": "Core skills installed: Weather, GitHub CLI, tmux, clawdhub, Bird Twitter client",
+      "status": "deployed",
+      "owner": "jeff",
+      "priority": "medium",
+      "created": "2026-01-26T15:43:00Z"
+    }
+  ]
+}

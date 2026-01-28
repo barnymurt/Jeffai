@@ -1,0 +1,74 @@
+{
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "agents": {
+    "defaults": {
+      "maxConcurrent": 1,
+      "subagents": {
+        "maxConcurrent": 1
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "workspace": "/home/ubuntu/clawd",
+      "rateLimits": {
+        "anthropic": {
+          "requestsPerMinute": 50,
+          "tokensPerMinute": 40000,
+          "requestsPerDay": 1000,
+          "retryBackoff": {
+            "initialDelay": 1000,
+            "maxDelay": 60000,
+            "multiplier": 2,
+            "maxRetries": 5
+          }
+        }
+      },
+      "queueing": {
+        "enabled": true,
+        "maxQueueSize": 100,
+        "processingDelay": 2000
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "4e3d4e1f87eb1bea3d7aa0b4d5ad92bdfcf1b0730ba8648d"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "8219840899:AAGXZtjTCpnk0quSAa702mF6DF6S6ZIsvJo"
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  }
+}

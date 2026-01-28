@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick & Jeff Task Board 🔧</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .header p { opacity: 0.9; font-size: 1.1rem; }
+        
+        .board { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 24px; 
+            margin-bottom: 40px;
+        }
+        
+        .column { 
+            background: white; 
+            border-radius: 12px; 
+            padding: 24px; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease;
+        }
+        .column:hover { transform: translateY(-2px); }
+        
+        .column h2 { 
+            margin-bottom: 20px; 
+            font-size: 18px; 
+            font-weight: 700; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        
+        .ideation { border-top: 5px solid #f59e0b; } 
+        .ideation h2 { color: #d97706; }
+        .progress { border-top: 5px solid #3b82f6; } 
+        .progress h2 { color: #1d4ed8; }
+        .review { border-top: 5px solid #f97316; } 
+        .review h2 { color: #ea580c; }
+        .demo { border-top: 5px solid #10b981; } 
+        .demo h2 { color: #059669; }
+        .deployed { border-top: 5px solid #8b5cf6; } 
+        .deployed h2 { color: #7c3aed; }
+        
+        .task { 
+            background: #f8fafc; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 8px; 
+            padding: 16px; 
+            margin-bottom: 12px; 
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .task:hover { 
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1); 
+            transform: translateY(-1px); 
+            background: #f1f5f9;
+        }
+        
+        .task-title { 
+            font-weight: 600; 
+            margin-bottom: 8px; 
+            color: #1e293b; 
+            font-size: 16px;
+        }
+        .task-desc { 
+            font-size: 14px; 
+            color: #64748b; 
+            line-height: 1.5; 
+            margin-bottom: 12px;
+        }
+        .task-meta { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            font-size: 12px; 
+        }
+        
+        .owner { 
+            background: #e2e8f0; 
+            padding: 4px 12px; 
+            border-radius: 16px; 
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .owner.jeff { background: #dbeafe; color: #1e40af; }
+        .owner.patrick { background: #dcfce7; color: #166534; }
+        .owner.both { background: #ede9fe; color: #7c2d12; }
+        
+        .priority { font-weight: 600; }
+        .priority.high { color: #dc2626; }
+        .priority.medium { color: #ea580c; }
+        .priority.low { color: #6b7280; }
+        
+        .stats { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 16px; 
+            margin-bottom: 30px;
+        }
+        .stat-card { 
+            background: rgba(255,255,255,0.95); 
+            padding: 20px; 
+            border-radius: 8px; 
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        .stat-number { 
+            font-size: 2rem; 
+            font-weight: 700; 
+            color: #1e293b; 
+        }
+        .stat-label { 
+            color: #64748b; 
+            font-size: 14px; 
+            font-weight: 500;
+        }
+        
+        .footer { 
+            text-align: center; 
+            color: rgba(255,255,255,0.8); 
+            font-size: 14px;
+            margin-top: 40px;
+        }
+        .footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .board { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Patrick & Jeff Task Board 🔧</h1>
+            <p>Collaborative Product Development & AI Implementation</p>
+        </div>
+        
+        <div class="stats" id="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="total-tasks">6</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="in-progress">2</div>
+                <div class="stat-label">In Progress</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completed">2</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="ideation">2</div>
+                <div class="stat-label">Ideas</div>
+            </div>
+        </div>
+
+        <div class="board">
+            <div class="column ideation">
+                <h2>💡 Ideation</h2>
+                <div class="task">
+                    <div class="task-title">Research ClawdHub Productivity Skills</div>
+                    <div class="task-desc">Explore email automation, calendar integration, social media management tools</div>
+                    <div class="task-meta">
+                        <span class="owner jeff">Jeff</span>
+                        <span class="priority medium">⚡ Medium</span>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-title">AI Agent Research Framework</div>
+                    <div class="task-desc">Design systematic approach for implementing Patrick's product concepts into actionable workflows</div>
+                    <div class="task-meta">
+                        <span class="owner both">Both</span>
+                        <span class="priority high">🔥 High</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column progress">
+                <h2>🔄 In Progress</h2>
+                <div class="task">
+                    <div class="task-title">Skills Setup - Core Integration</div>
+                    <div class="task-desc">Configure GitHub, Bird (Twitter), Notion, and essential development toolchain</div>
+                    <div class="task-meta">
+                        <span class="owner jeff">Jeff</span>
+                        <span class="priority high">🔥 High</span>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-title">GitHub Task Board Migration</div>
+                    <div class="task-desc">Set up professional GitHub Projects board for long-term collaboration</div>
+                    <div class="task-meta">
+                        <span class="owner jeff">Jeff</span>
+                        <span class="priority medium">⚡ Medium</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column review">
+                <h2>👀 Ready for Review</h2>
+                <div style="text-align: center; padding: 40px; color: #94a3b8; font-style: italic;">
+                    Tasks ready for Patrick's review will appear here
+                </div>
+            </div>
+
+            <div class="column demo">
+                <h2>🚀 Demo Ready</h2>
+                <div style="text-align: center; padding: 40px; color: #94a3b8; font-style: italic;">
+                    Completed features ready to showcase
+                </div>
+            </div>
+
+            <div class="column deployed">
+                <h2>✅ Deployed</h2>
+                <div class="task">
+                    <div class="task-title">Weather Skills Integration</div>
+                    <div class="task-desc">Lisbon weather forecasting and wttr.in integration fully operational</div>
+                    <div class="task-meta">
+                        <span class="owner jeff">Jeff</span>
+                        <span class="priority low">📋 Low</span>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-title">Basic Clawdbot Setup</div>
+                    <div class="task-desc">Core skills installed: Weather, GitHub CLI, tmux, clawdhub, Bird Twitter client</div>
+                    <div class="task-meta">
+                        <span class="owner jeff">Jeff</span>
+                        <span class="priority medium">⚡ Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🔧 Built with Clawdbot | 
+            <a href="https://github.com/barnymurt/patrick-jefftasboard" target="_blank">View on GitHub</a> | 
+            Last updated: 2026-01-26</p>
+        </div>
+    </div>
+</body>
+</html>

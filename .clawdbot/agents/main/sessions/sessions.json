@@ -1,0 +1,621 @@
+{
+  "agent:main:main": {
+    "sessionId": "af39350d-e95f-4928-9bad-e912bdf6861f",
+    "updatedAt": 1769545266527,
+    "systemSent": true,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\n\n<available_skills>\n  <skill>\n    <name>bird</name>\n    <description>X/Twitter CLI for reading, searching, posting, and engagement via cookies.</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/bird/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>clawdhub</name>\n    <description>Use the ClawdHub CLI to search, install, update, and publish agent skills from clawdhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawdhub CLI.</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/clawdhub/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>mcporter</name>\n    <description>Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/mcporter/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>nano-banana-pro</name>\n    <description>Generate/edit images with Nano Banana Pro (Gemini 3 Pro Image). Use for image create/modify requests incl. edits. Supports text-to-image + image-to-image; 1K/2K/4K; use --input-image.</description>\n    <location>/home/ubuntu/clawd/skills/nano-banana-pro/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>nano-pdf</name>\n    <description>Edit PDFs with natural-language instructions using the nano-pdf CLI.</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/nano-pdf/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>notion</name>\n    <description>Notion API for creating and managing pages, databases, and blocks.</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/notion/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>oracle</name>\n    <description>Use the @steipete/oracle CLI to bundle a prompt plus the right files and get a second-model review (API or browser) for debugging, refactors, design checks, or cross-validation.</description>\n    <location>/home/ubuntu/clawd/skills/oracle/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>slack</name>\n    <description>Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/slack/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tmux</name>\n    <description>Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/tmux/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>agent-browser</name>\n    <description>Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection</description>\n    <location>/home/ubuntu/clawd/skills/agent-browser-clawdbot/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>doc-coauthoring</name>\n    <description>Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.</description>\n    <location>/home/ubuntu/clawd/skills/doc-coauthoring/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>figma</name>\n    <description>Professional Figma design analysis and asset export. Use for extracting design data, exporting assets in multiple formats, auditing accessibility compliance, analyzing design systems, and generating comprehensive design documentation. Read-only analysis of Figma files with powerful export and reporting capabilities.</description>\n    <location>/home/ubuntu/clawd/skills/figma/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>frontend-design</name>\n    <description>Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.</description>\n    <location>/home/ubuntu/clawd/skills/frontend-design/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>google-workspace</name>\n    <description>Gmail, Calendar, Drive, Docs, Sheets — NO Google Cloud Console required. Just OAuth sign-in. Zero setup complexity vs traditional Google API integrations.</description>\n    <location>/home/ubuntu/clawd/skills/google-workspace-mcp/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>internal-comms</name>\n    <description>A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).</description>\n    <location>/home/ubuntu/clawd/skills/internal-comms/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>pptx</name>\n    <description>Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks</description>\n    <location>/home/ubuntu/clawd/skills/pptx/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>reddit</name>\n    <description>Browse, search, post, and moderate Reddit. Read-only works without auth; posting/moderation requires OAuth setup.</description>\n    <location>/home/ubuntu/clawd/skills/reddit/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>self-improvement</name>\n    <description>Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude (&apos;No, that&apos;s wrong...&apos;, &apos;Actually...&apos;), (3) User requests a capability that doesn&apos;t exist, (4) An external API or tool fails, (5) Claude realizes its knowledge is outdated or incorrect, (6) A better approach is discovered for a recurring task. Also review learnings before major tasks.</description>\n    <location>/home/ubuntu/clawd/skills/self-improving-agent-1-0-2/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>theme-factory</name>\n    <description>Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.</description>\n    <location>/home/ubuntu/clawd/skills/theme-factory/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>web-artifacts-builder</name>\n    <description>Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.</description>\n    <location>/home/ubuntu/clawd/skills/web-artifacts-builder/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>youtube-summarizer</name>\n    <description>Automatically fetch YouTube video transcripts, generate structured summaries, and send full transcripts to messaging platforms. Detects YouTube URLs and provides metadata, key insights, and downloadable transcripts.</description>\n    <location>/home/ubuntu/clawd/skills/youtube-summarizer/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "bird"
+        },
+        {
+          "name": "bluebubbles"
+        },
+        {
+          "name": "clawdhub"
+        },
+        {
+          "name": "github"
+        },
+        {
+          "name": "mcporter"
+        },
+        {
+          "name": "nano-banana-pro"
+        },
+        {
+          "name": "nano-pdf"
+        },
+        {
+          "name": "notion"
+        },
+        {
+          "name": "oracle"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "slack"
+        },
+        {
+          "name": "tmux"
+        },
+        {
+          "name": "weather"
+        },
+        {
+          "name": "agent-browser"
+        },
+        {
+          "name": "doc-coauthoring"
+        },
+        {
+          "name": "figma"
+        },
+        {
+          "name": "frontend-design"
+        },
+        {
+          "name": "google-workspace"
+        },
+        {
+          "name": "internal-comms"
+        },
+        {
+          "name": "pptx"
+        },
+        {
+          "name": "reddit"
+        },
+        {
+          "name": "self-improvement"
+        },
+        {
+          "name": "theme-factory"
+        },
+        {
+          "name": "web-artifacts-builder"
+        },
+        {
+          "name": "youtube-summarizer"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "bird",
+          "description": "X/Twitter CLI for reading, searching, posting, and engagement via cookies.",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/bird/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/bird",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "bluebubbles",
+          "description": "Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/bluebubbles/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/bluebubbles",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "clawdhub",
+          "description": "Use the ClawdHub CLI to search, install, update, and publish agent skills from clawdhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawdhub CLI.",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/clawdhub/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/clawdhub",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "github",
+          "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/github/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/github",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "mcporter",
+          "description": "Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/mcporter/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/mcporter",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "nano-banana-pro",
+          "description": "Generate/edit images with Nano Banana Pro (Gemini 3 Pro Image). Use for image create/modify requests incl. edits. Supports text-to-image + image-to-image; 1K/2K/4K; use --input-image.",
+          "filePath": "/home/ubuntu/clawd/skills/nano-banana-pro/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/nano-banana-pro",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "nano-pdf",
+          "description": "Edit PDFs with natural-language instructions using the nano-pdf CLI.",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/nano-pdf/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/nano-pdf",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "notion",
+          "description": "Notion API for creating and managing pages, databases, and blocks.",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/notion/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/notion",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "oracle",
+          "description": "Use the @steipete/oracle CLI to bundle a prompt plus the right files and get a second-model review (API or browser) for debugging, refactors, design checks, or cross-validation.",
+          "filePath": "/home/ubuntu/clawd/skills/oracle/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/oracle",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/skill-creator/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/skill-creator",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "slack",
+          "description": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/slack/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/slack",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "tmux",
+          "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/tmux/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/tmux",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts (no API key required).",
+          "filePath": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/weather/SKILL.md",
+          "baseDir": "/home/ubuntu/.nvm/versions/node/v24.13.0/lib/node_modules/clawdbot/skills/weather",
+          "source": "clawdbot-bundled"
+        },
+        {
+          "name": "agent-browser",
+          "description": "Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection",
+          "filePath": "/home/ubuntu/clawd/skills/agent-browser-clawdbot/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/agent-browser-clawdbot",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "doc-coauthoring",
+          "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.",
+          "filePath": "/home/ubuntu/clawd/skills/doc-coauthoring/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/doc-coauthoring",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "figma",
+          "description": "Professional Figma design analysis and asset export. Use for extracting design data, exporting assets in multiple formats, auditing accessibility compliance, analyzing design systems, and generating comprehensive design documentation. Read-only analysis of Figma files with powerful export and reporting capabilities.",
+          "filePath": "/home/ubuntu/clawd/skills/figma/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/figma",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "frontend-design",
+          "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.",
+          "filePath": "/home/ubuntu/clawd/skills/frontend-design/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/frontend-design",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "google-workspace",
+          "description": "Gmail, Calendar, Drive, Docs, Sheets — NO Google Cloud Console required. Just OAuth sign-in. Zero setup complexity vs traditional Google API integrations.",
+          "filePath": "/home/ubuntu/clawd/skills/google-workspace-mcp/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/google-workspace-mcp",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "internal-comms",
+          "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+          "filePath": "/home/ubuntu/clawd/skills/internal-comms/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/internal-comms",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "pptx",
+          "description": "Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks",
+          "filePath": "/home/ubuntu/clawd/skills/pptx/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/pptx",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "reddit",
+          "description": "Browse, search, post, and moderate Reddit. Read-only works without auth; posting/moderation requires OAuth setup.",
+          "filePath": "/home/ubuntu/clawd/skills/reddit/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/reddit",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "self-improvement",
+          "description": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Claude realizes its knowledge is outdated or incorrect, (6) A better approach is discovered for a recurring task. Also review learnings before major tasks.",
+          "filePath": "/home/ubuntu/clawd/skills/self-improving-agent-1-0-2/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/self-improving-agent-1-0-2",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "theme-factory",
+          "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+          "filePath": "/home/ubuntu/clawd/skills/theme-factory/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/theme-factory",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "web-artifacts-builder",
+          "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+          "filePath": "/home/ubuntu/clawd/skills/web-artifacts-builder/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/web-artifacts-builder",
+          "source": "clawdbot-workspace"
+        },
+        {
+          "name": "youtube-summarizer",
+          "description": "Automatically fetch YouTube video transcripts, generate structured summaries, and send full transcripts to messaging platforms. Detects YouTube URLs and provides metadata, key insights, and downloadable transcripts.",
+          "filePath": "/home/ubuntu/clawd/skills/youtube-summarizer/SKILL.md",
+          "baseDir": "/home/ubuntu/clawd/skills/youtube-summarizer",
+          "source": "clawdbot-workspace"
+        }
+      ],
+      "version": 1769527891922
+    },
+    "deliveryContext": {
+      "channel": "telegram",
+      "to": "telegram:1328984799",
+      "accountId": "default"
+    },
+    "lastChannel": "telegram",
+    "lastTo": "telegram:1328984799",
+    "lastAccountId": "default",
+    "channel": "telegram",
+    "modelProvider": "anthropic",
+    "model": "claude-sonnet-4-20250514",
+    "contextTokens": 200000,
+    "abortedLastRun": false,
+    "inputTokens": 11,
+    "outputTokens": 561,
+    "totalTokens": 19062,
+    "origin": {
+      "label": "Patrick Raul (@Barnzm) id:1328984799",
+      "provider": "telegram",
+      "surface": "telegram",
+      "chatType": "direct",
+      "from": "telegram:1328984799",
+      "to": "telegram:1328984799",
+      "accountId": "default"
+    },
+    "chatType": "direct",
+    "sessionFile": "/home/ubuntu/.clawdbot/agents/main/sessions/af39350d-e95f-4928-9bad-e912bdf6861f.jsonl",
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1769545238494,
+      "sessionId": "af39350d-e95f-4928-9bad-e912bdf6861f",
+      "sessionKey": "agent:main:main",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "workspaceDir": "/home/ubuntu/clawd",
+      "bootstrapMaxChars": 20000,
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 32067,
+        "projectContextChars": 14745,
+        "nonProjectContextChars": 17322
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/home/ubuntu/clawd/AGENTS.md",
+          "missing": false,
+          "rawChars": 7783,
+          "injectedChars": 7783,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/home/ubuntu/clawd/SOUL.md",
+          "missing": false,
+          "rawChars": 1664,
+          "injectedChars": 1664,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/home/ubuntu/clawd/TOOLS.md",
+          "missing": false,
+          "rawChars": 1425,
+          "injectedChars": 1425,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/home/ubuntu/clawd/IDENTITY.md",
+          "missing": false,
+          "rawChars": 684,
+          "injectedChars": 684,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/home/ubuntu/clawd/USER.md",
+          "missing": false,
+          "rawChars": 1255,
+          "injectedChars": 1255,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/home/ubuntu/clawd/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 166,
+          "injectedChars": 166,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/home/ubuntu/clawd/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1444,
+          "injectedChars": 1444,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 9452,
+        "entries": [
+          {
+            "name": "bird",
+            "blockChars": 259
+          },
+          {
+            "name": "bluebubbles",
+            "blockChars": 322
+          },
+          {
+            "name": "clawdhub",
+            "blockChars": 464
+          },
+          {
+            "name": "github",
+            "blockChars": 325
+          },
+          {
+            "name": "mcporter",
+            "blockChars": 357
+          },
+          {
+            "name": "nano-banana-pro",
+            "blockChars": 342
+          },
+          {
+            "name": "nano-pdf",
+            "blockChars": 261
+          },
+          {
+            "name": "notion",
+            "blockChars": 255
+          },
+          {
+            "name": "oracle",
+            "blockChars": 318
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 323
+          },
+          {
+            "name": "slack",
+            "blockChars": 339
+          },
+          {
+            "name": "tmux",
+            "blockChars": 282
+          },
+          {
+            "name": "weather",
+            "blockChars": 247
+          },
+          {
+            "name": "agent-browser",
+            "blockChars": 285
+          },
+          {
+            "name": "doc-coauthoring",
+            "blockChars": 587
+          },
+          {
+            "name": "figma",
+            "blockChars": 456
+          },
+          {
+            "name": "frontend-design",
+            "blockChars": 393
+          },
+          {
+            "name": "google-workspace",
+            "blockChars": 319
+          },
+          {
+            "name": "internal-comms",
+            "blockChars": 486
+          },
+          {
+            "name": "pptx",
+            "blockChars": 408
+          },
+          {
+            "name": "reddit",
+            "blockChars": 254
+          },
+          {
+            "name": "self-improvement",
+            "blockChars": 646
+          },
+          {
+            "name": "theme-factory",
+            "blockChars": 417
+          },
+          {
+            "name": "web-artifacts-builder",
+            "blockChars": 459
+          },
+          {
+            "name": "youtube-summarizer",
+            "blockChars": 380
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 1984,
+        "schemaChars": 13981,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 232,
+            "schemaChars": 398,
+            "propertiesCount": 4
+          },
+          {
+            "name": "edit",
+            "summaryChars": 129,
+            "schemaChars": 617,
+            "propertiesCount": 6
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 313,
+            "propertiesCount": 3
+          },
+          {
+            "name": "exec",
+            "summaryChars": 181,
+            "schemaChars": 1037,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 85,
+            "schemaChars": 844,
+            "propertiesCount": 11
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1343,
+            "schemaChars": 1909,
+            "propertiesCount": 29
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "nodes",
+            "summaryChars": 94,
+            "schemaChars": 1399,
+            "propertiesCount": 31
+          },
+          {
+            "name": "cron",
+            "summaryChars": 246,
+            "schemaChars": 530,
+            "propertiesCount": 12
+          },
+          {
+            "name": "message",
+            "summaryChars": 112,
+            "schemaChars": 3100,
+            "propertiesCount": 77
+          },
+          {
+            "name": "tts",
+            "summaryChars": 129,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gateway",
+            "summaryChars": 225,
+            "schemaChars": 465,
+            "propertiesCount": 11
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 72,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 54,
+            "schemaChars": 176,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 36,
+            "schemaChars": 149,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 84,
+            "schemaChars": 203,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 107,
+            "schemaChars": 312,
+            "propertiesCount": 8
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 207,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 175,
+            "schemaChars": 733,
+            "propertiesCount": 6
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 360,
+            "propertiesCount": 3
+          },
+          {
+            "name": "image",
+            "summaryChars": 184,
+            "schemaChars": 163,
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 235,
+            "schemaChars": 139,
+            "propertiesCount": 3
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 151,
+            "schemaChars": 128,
+            "propertiesCount": 3
+          }
+        ]
+      }
+    },
+    "authProfileOverride": "anthropic:default",
+    "authProfileOverrideSource": "auto",
+    "authProfileOverrideCompactionCount": 0
+  }
+}

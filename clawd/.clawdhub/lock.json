@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1769447083754
+    },
+    "self-improving-agent-1-0-2": {
+      "version": "1.0.0",
+      "installedAt": 1769458924802
+    },
+    "google-workspace-mcp": {
+      "version": "1.0.0",
+      "installedAt": 1769459048370
+    },
+    "youtube-summarizer": {
+      "version": "1.0.0",
+      "installedAt": 1769461777342
+    },
+    "nano-banana-pro": {
+      "version": "1.0.1",
+      "installedAt": 1769519200204
+    },
+    "1password": {
+      "version": "1.0.1",
+      "installedAt": 1769523518301
+    },
+    "apple-notes": {
+      "version": "1.0.0",
+      "installedAt": 1769523545862
+    },
+    "apple-reminders": {
+      "version": "1.0.0",
+      "installedAt": 1769523619189
+    },
+    "bear-notes": {
+      "version": "1.0.0",
+      "installedAt": 1769523645130
+    },
+    "blogwatcher": {
+      "version": "1.0.0",
+      "installedAt": 1769523656362
+    },
+    "camsnap": {
+      "version": "1.0.0",
+      "installedAt": 1769523703781
+    },
+    "coding-agent": {
+      "version": "1.0.1",
+      "installedAt": 1769523712857
+    },
+    "perplexity": {
+      "version": "1.0.0",
+      "installedAt": 1769524236881
+    },
+    "trello": {
+      "version": "1.0.0",
+      "installedAt": 1769524319080
+    },
+    "spotify": {
+      "version": "1.0.0",
+      "installedAt": 1769524324101
+    },
+    "dropbox": {
+      "version": "1.0.0",
+      "installedAt": 1769524370508
+    },
+    "figma": {
+      "version": "2.1.0",
+      "installedAt": 1769524405074
+    },
+    "reddit": {
+      "version": "1.0.0",
+      "installedAt": 1769524570297
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1769525152820
+    },
+    "things-mac": {
+      "version": "1.0.0",
+      "installedAt": 1769525161685
+    },
+    "video-frames": {
+      "version": "1.0.0",
+      "installedAt": 1769525174773
+    },
+    "wacli": {
+      "version": "1.0.0",
+      "installedAt": 1769525202820
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1769525354258
+    },
+    "openai-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1769525404541
+    },
+    "openai-whisper-api": {
+      "version": "1.0.0",
+      "installedAt": 1769525430856
+    },
+    "openhue": {
+      "version": "1.0.0",
+      "installedAt": 1769525451918
+    },
+    "oracle": {
+      "version": "1.0.1",
+      "installedAt": 1769525500621
+    },
+    "sag": {
+      "version": "1.0.0",
+      "installedAt": 1769525591226
+    },
+    "sonoscli": {
+      "version": "1.0.0",
+      "installedAt": 1769525723627
+    },
+    "frontend-design": {
+      "version": "1.0.0",
+      "installedAt": 1769526738953
+    }
+  }
+}

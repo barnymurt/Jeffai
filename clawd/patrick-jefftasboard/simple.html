@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patrick & Jeff Task Board 🔧</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f7fa; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; color: #2d3748; margin-bottom: 30px; }
+        .board { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .column { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .column h2 { margin-bottom: 15px; font-size: 16px; }
+        .ideation { border-top: 4px solid #f6e05e; }
+        .progress { border-top: 4px solid #4299e1; }
+        .review { border-top: 4px solid #ed8936; }
+        .demo { border-top: 4px solid #48bb78; }
+        .deployed { border-top: 4px solid #9f7aea; }
+        .task { background: #f9f9f9; padding: 12px; margin-bottom: 10px; border-radius: 6px; }
+        .task-title { font-weight: 600; margin-bottom: 6px; }
+        .task-desc { font-size: 14px; color: #666; margin-bottom: 8px; }
+        .task-meta { display: flex; justify-content: space-between; font-size: 12px; }
+        .owner { background: #e2e8f0; padding: 2px 8px; border-radius: 12px; }
+        .jeff { background: #bee3f8; color: #2b6cb0; }
+        .patrick { background: #c6f6d5; color: #25855a; }
+        .both { background: #e9d8fd; color: #6b46c1; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Patrick & Jeff Task Board 🔧</h1>
+        
+        <div class="board">
+            <div class="column ideation">
+                <h2>💡 Ideation</h2>
+                <div class="task">
+                    <div class="task-title">Research ClawdHub Skills</div>
+                    <div class="task-desc">Explore email automation, calendar integration</div>
+                    <div class="task-meta"><span class="owner jeff">Jeff</span><span>⚡ Medium</span></div>
+                </div>
+                <div class="task">
+                    <div class="task-title">AI Agent Research Framework</div>
+                    <div class="task-desc">Design systematic approach for Patrick's concepts</div>
+                    <div class="task-meta"><span class="owner both">Both</span><span>🔥 High</span></div>
+                </div>
+            </div>
+
+            <div class="column progress">
+                <h2>🔄 In Progress</h2>
+                <div class="task">
+                    <div class="task-title">Skills Setup - Core Integration</div>
+                    <div class="task-desc">Configure GitHub, Bird, Notion toolchain</div>
+                    <div class="task-meta"><span class="owner jeff">Jeff</span><span>🔥 High</span></div>
+                </div>
+                <div class="task">
+                    <div class="task-title">GitHub Task Board Migration</div>
+                    <div class="task-desc">Professional GitHub Projects setup</div>
+                    <div class="task-meta"><span class="owner jeff">Jeff</span><span>⚡ Medium</span></div>
+                </div>
+            </div>
+
+            <div class="column review">
+                <h2>👀 Ready for Review</h2>
+                <p style="text-align: center; color: #999; padding: 20px;">Tasks ready for review</p>
+            </div>
+
+            <div class="column demo">
+                <h2>🚀 Demo Ready</h2>
+                <p style="text-align: center; color: #999; padding: 20px;">Ready to showcase</p>
+            </div>
+
+            <div class="column deployed">
+                <h2>✅ Deployed</h2>
+                <div class="task">
+                    <div class="task-title">Weather Skills Integration</div>
+                    <div class="task-desc">Lisbon weather forecasting working</div>
+                    <div class="task-meta"><span class="owner jeff">Jeff</span><span>📋 Low</span></div>
+                </div>
+                <div class="task">
+                    <div class="task-title">Basic Clawdbot Setup</div>
+                    <div class="task-desc">Core skills installed and operational</div>
+                    <div class="task-meta"><span class="owner jeff">Jeff</span><span>⚡ Medium</span></div>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 30px; color: #666;">
+            🔧 Built with Clawdbot | Last updated: 2026-01-26
+        </p>
+    </div>
+</body>
+</html>

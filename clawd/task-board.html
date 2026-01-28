@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick & Jeff Task Board 🔧</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; margin-bottom: 30px; color: #2d3748; }
+        .board { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .column { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .column h2 { margin-bottom: 15px; font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+        .ideation { border-top: 4px solid #f6e05e; } .ideation h2 { color: #d69e2e; }
+        .progress { border-top: 4px solid #4299e1; } .progress h2 { color: #3182ce; }
+        .review { border-top: 4px solid #ed8936; } .review h2 { color: #dd6b20; }
+        .demo { border-top: 4px solid #48bb78; } .demo h2 { color: #38a169; }
+        .deployed { border-top: 4px solid #9f7aea; } .deployed h2 { color: #805ad5; }
+        .task { background: #f9f9f9; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px; margin-bottom: 10px; transition: all 0.2s; }
+        .task:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-1px); }
+        .task-title { font-weight: 500; margin-bottom: 6px; color: #2d3748; }
+        .task-desc { font-size: 14px; color: #718096; line-height: 1.4; }
+        .task-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 12px; }
+        .owner { background: #edf2f7; padding: 2px 8px; border-radius: 12px; font-weight: 500; }
+        .owner.jeff { background: #bee3f8; color: #2b6cb0; }
+        .owner.patrick { background: #c6f6d5; color: #25855a; }
+        .owner.both { background: #e9d8fd; color: #6b46c1; }
+        .priority { font-weight: 500; }
+        .priority.high { color: #e53e3e; }
+        .priority.medium { color: #dd6b20; }
+        .priority.low { color: #718096; }
+        .add-task { background: #f7fafc; border: 2px dashed #cbd5e0; border-radius: 6px; padding: 20px; text-align: center; color: #a0aec0; cursor: pointer; }
+        .add-task:hover { border-color: #4299e1; color: #4299e1; }
+        .timestamp { text-align: center; margin-top: 30px; color: #a0aec0; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Patrick & Jeff Task Board 🔧</h1>
+        
+        <div class="board">
+            <div class="column ideation">
+                <h2>💡 Ideation</h2>
+                <div class="task">
+                    <div class="task-title">Research ClawdHub productivity skills</div>
+                    <div class="task-desc">Explore email automation, calendar integration, social media management</div>
+                    <div class="task-meta">
+                        <span class="owner jeff">Jeff</span>
+                        <span class="priority medium">⚡ Medium</span>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-title">AI Agent Research Framework</div>
+                    <div class="task-desc">Design systematic approach for implementing Patrick's product concepts</div>
+                    <div class="task-meta">
+                        <span class="owner both">Both</span>
+                        <span class="priority high">🔥 High</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column progress">
+                <h2>🔄 In Progress</h2>
+                <div class="task">
+                    <div class="task-title">Skills Setup - Core Integration</div>
+                    <div class="task-desc">Configure GitHub, Bird (Twitter), Notion, basic toolchain</div>
+                    <div class="task-meta">
+                        <span class="owner jeff">Jeff</span>
+                        <span class="priority high">🔥 High</span>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-title">Task Board Migration to GitHub</div>
+                    <div class="task-desc">Set up GitHub Projects for long-term collaboration</div>
+                    <div class="task-meta">
+                        <span class="owner jeff">Jeff</span>
+                        <span class="priority medium">⚡ Medium</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column review">
+                <h2>👀 Ready for Review</h2>
+                <div class="task">
+                    <div class="task-title">Weather Skill Demo</div>
+                    <div class="task-desc">Show weather integration working for Lisbon</div>
+                    <div class="task-meta">
+                        <span class="owner jeff">Jeff</span>
+                        <span class="priority low">📋 Low</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column demo">
+                <h2>🚀 Demo Ready</h2>
+                <!-- Empty for now -->
+                <div class="add-task">
+                    Ready to show off ✨
+                </div>
+            </div>
+
+            <div class="column deployed">
+                <h2>✅ Deployed</h2>
+                <div class="task">
+                    <div class="task-title">Basic Clawdbot Setup</div>
+                    <div class="task-desc">Weather, GitHub CLI, tmux, clawdhub, Bird installation complete</div>
+                    <div class="task-meta">
+                        <span class="owner jeff">Jeff</span>
+                        <span class="priority medium">⚡ Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timestamp">
+            Last updated: 2026-01-26 15:30 UTC | View at: file:///home/ubuntu/clawd/task-board.html
+        </div>
+    </div>
+</body>
+</html>
