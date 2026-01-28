@@ -65,6 +65,11 @@ When working on specific tasks, reference these skills for specialized workflows
 **Skill:** `skills/brand-guidelines/SKILL.md`
 **Use when:** Applying Anthropic brand colors/typography to artifacts
 
+### Product Owner / Product Strategy
+**Skill:** `skills/product-owner/SKILL.md`
+**Use when:** Prioritizing features, planning sprints, customer discovery, backlog management
+**Includes:** Prioritization framework, interview guides, Opportunity Solution Trees
+
 ### Creating New Skills
 **Skill:** `skills/skill-creator/SKILL.md`
 **Use when:** Building new skills to extend capabilities
